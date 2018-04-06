@@ -1,0 +1,334 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	background: rgb(237,242,250);
+    font-family: 'Saira';
+}
+/***********Mobile View***********/
+/***First Icon Image***/
+.image-div{
+	width: 100%;
+	background: rgb(66,103,178);
+}
+.image-div img{
+	width: 80px;
+	height: 80px;
+}
+header{
+	background: url("back.jpg");
+	background-attachment: fixed; 
+	width:100%;
+	height: 10%;
+	padding: 3%;
+	box-shadow: 0px 1px 2px #000;
+	display: block;
+    font-family: 'Saira';
+}
+label{
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+}
+label img{
+	background: inherit;
+}
+ul{
+	list-style: none;
+	text-align: center;
+	padding-right: 30px; 
+	display: none;
+}
+ul li{
+	padding: 10px 0px 10px 0;
+}
+ul li a{
+	text-decoration: none;
+	color:#fff;
+	animation-name: homination;
+	animation-duration: 2s;
+        -webkit-animation-name: homination;
+        -webkit-animation-duration: 2s;
+        -moz-animation-name: homination;
+        -moz-animation-duration: 2s;
+}
+@keyframes homination{
+	from{color:inherit; border-bottom: inherit;}
+	to{color:#fff;}
+}
+@-webkit-keyframes homination{
+	from{color:inherit; border-bottom: inherit;}
+	to{color:#fff;}
+}
+@-moz-keyframes homination{
+	from{color:inherit; border-bottom: inherit;}
+	to{color:#fff;}
+}
+input[type=checkbox]{
+	display: none;
+}
+input[type=checkbox]:checked ~ ul{
+	display: block;
+}
+/***Second Icon Image***/
+.second-div img{
+	display: none;
+}
+.name{
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 3%;
+}
+.name a{
+	text-decoration: none;
+	color: #000;
+    animation-name: startimation;
+	animation-duration: 6s;
+        -moz-animation-name: startimation; /*Mozilla support*/
+        -moz-animation-duration: 6s; /*Mozilla support*/
+        -webkit-animation-name: startimation; /*Safari support*/
+    	-webkit-animation-duration: 6s; /*Safari support*/
+    font-family: 'Bad Script';
+}
+@keyframes startimation{
+	from{color:rgb(237,242,250);}
+	to{color:#000;}
+}
+/* For Safari*/
+@-webkit-keyframes startimation{
+	from{color:rgb(237,242,250);}
+	to{color:#000;}
+}
+/* For Mozilla*/
+@-moz-keyframes startimation{
+	from{color:rgb(237,242,250);}
+	to{color:#000;}
+}
+hr{
+    width:50%;
+    height:7px;
+    animation-name:hrline;
+    animation-duration:3s;
+        -webkit-animation-name:hrline;
+        -webkit-animation-duration:3s;
+        -moz-animation-name:hrline;
+        -moz-animation-duration:3s;
+}
+@keyframes hrline{
+    from{background:blue;margin-left:-50%;}
+    to{background:blue;margin-left:25%;}
+}
+@-webkit-keyframes hrline{
+    from{background:blue;margin-left:-50%;}
+    to{background:blue;margin-left:25%;}
+}
+@-moz-keyframes hrline{
+    from{background:blue;margin-left:-50%;}
+    to{background:blue;margin-left:25%;}
+}
+.description div{
+	margin-bottom: 3%;
+	animation-name: startimation;
+	animation-duration: 10s;
+        -webkit-animation-name: startimation;
+        -webkit-animation-duration: 10s;
+        -moz-animation-name: startimation;
+        -moz-animation-duration: 10s;
+    font-family: 'Permanent Marker';
+}
+.description fieldset{
+	margin:5%;
+	padding: 4%;
+	background: url("background.jpg");
+	color:rgb(237,242,250);
+	font-size: 15px;
+	box-shadow: 2px 1px 2px #000;
+    font-family: 'Norican'
+}
+.description fieldset legend{
+	border: 1px solid white;
+	font-weight: bold;
+	border-radius: 7%;
+	margin-top: 10%;
+	background: #000;
+}
+.description fieldset q{
+	font-weight: bold;
+    font-family: 'Nothing You Could Do';
+}
+.scrollTop{
+	margin-left: 60%;
+	border:1px solid rgb(32,82,213);
+	padding:1%;
+    border-radius:5%;
+}
+.scrollTop a{
+    text-decoration: none;
+	color: rgb(32,82,213);
+    font-weight:bold;
+}
+footer{
+    margin-top: 5%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background: linear-gradient(to top, rgb(66,103,178), rgb(237,242,250));
+}
+footer a{
+	text-decoration: none;
+	color: inherit;
+}
+/*************Desktop View***************/
+@media screen and (min-width: 870px){
+	body{
+		width:100%;
+	}
+	header{
+		width: 100%;
+		height:400px;
+	}
+	header ul li a{
+		display: inline;
+		color:#fff;
+		margin-left:4%;
+		padding:1%;
+		background: none;
+		font-size:20px;
+	}
+	header a:hover{
+		color:rgb(195,195,195);
+		border-bottom: 3px solid rgb(195,195,195); 
+	}
+	header input{
+		display: none;
+	}
+	header label{
+		display: none;
+	}
+	header ul{
+		display: inline;
+	}
+	header ul li{
+		display: inline;
+	}
+	header ul li .checked{
+		border-bottom: 3px solid rgb(195,195,195);
+	}
+	.image-div{
+		display: none;
+	}
+	.second-div{
+
+	}
+	.second-div img{
+		display: inline;
+		width: 150px;
+		height: 150px;
+		background: #000; /*rgb(66,103,178);*/
+		border-radius: 100%;
+		margin-top:-3%;
+		transition: transform 1s;
+		border:4px solid rgb(237,242,250);
+		animation-name:rollercoster;
+		animation-duration: 3s;
+            -webkit-animation-name:rollercoster;
+            -webkit-animation-duration: 3s;
+            -moz-animation-name:rollercoster;
+            -moz-animation-duration: 3s;
+	}
+	@keyframes rollercoster{
+		from{
+                -webkit-transition: transform 10s;/*Safari*/
+                -webkit-transform: rotateZ(-360deg);
+                -moz-transition: transform 10s;/*Mozilla*/
+                -moz-transform: rotateZ(-360deg);
+			transition: transform 10s;
+			transform: rotateZ(-360deg);
+			background: rgb(66,103,178);
+			border-radius: 10%;
+			box-shadow: 2px 2px 1px grey;
+		}
+		to{
+			transition: none;
+			transform: none;
+			    -webkit-transition: none;
+                -webkit-transform: none;
+                -moz-transition: none;
+                -moz-transform: none;
+            background: black;
+		}
+	}
+    @-webkit-keyframes rollercoster{
+		from{
+                -webkit-transition: transform 10s;/*Safari*/
+                -webkit-transform: rotateZ(-360deg);
+                -moz-transition: transform 10s;/*Mozilla*/
+                -moz-transform: rotateZ(-360deg);
+			transition: transform 10s;
+			transform: rotateZ(-360deg);
+			background: rgb(66,103,178);
+			border-radius: 10%;
+			box-shadow: 2px 2px 1px grey;
+		}
+		to{
+			transition: none;
+			transform: none;
+			    -webkit-transition: none;
+                -webkit-transform: none;
+                -moz-transition: none;
+                -moz-transform: none;
+            background: inherit;
+		}
+	}
+    @-moz-keyframes rollercoster{
+		from{
+                -webkit-transition: transform 10s;/*Safari*/
+                -webkit-transform: rotateZ(-360deg);
+                -moz-transition: transform 10s;/*Mozilla*/
+                -moz-transform: rotateZ(-360deg);
+			transition: transform 10s;
+			transform: rotateZ(-360deg);
+			background: rgb(66,103,178);
+			border-radius: 10%;
+			box-shadow: 2px 2px 1px grey;
+		}
+		to{
+			transition: none;
+			transform: none;
+			    -webkit-transition: none;
+                -webkit-transform: none;
+                -moz-transition: none;
+                -moz-transform: none;
+            background: inherit;
+		}
+	}
+	.second-div img:hover{
+        transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+    }
+	.name{
+		font-size: 30px;
+	}
+    .description .welcome{
+        font-size: 30px;
+    }
+	.description fieldset{
+		font-size: 20px;
+	}
+	.scrollTop{
+		margin-left: 80%;
+        transition:transform 1s;
+            -webkit-transition:transform 1s;
+            -moz-transition:transform 1s;
+	}
+    .scrollTop:hover{
+        transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+    }
+}
