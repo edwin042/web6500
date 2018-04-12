@@ -262,7 +262,7 @@ hr{
 	border:1px solid rgb(32,82,213);
 	padding:1%;
     border-radius:5%;
-    width:7%;
+    width:15%;
 }
 .scrollTop a{
     text-decoration: none;
@@ -343,6 +343,7 @@ footer p{
 	}
 	.scrollTop{
 		margin-left: 80%;
+        width:7%;
         transition:transform 1s;
             -webkit-transition:transform 1s;
             -moz-transition:transform 1s;
