@@ -20,14 +20,14 @@ body{
         -webkit-animation-duration: 7s;
         -moz-animation-name: startpoint;
         -moz-animation-duration: 7s;
-    font-family: 'Permanent Marker';
+    font-family:'Bungee';
 }
 @keyframes startpoint{
 	from{color:grey;}
 	to{color:white;}
 }
 header{
-	background: url("back.jpg");
+	background: url("back.png");
 	background-attachment: fixed; 
 	width:100%;
 	height: 10%;
@@ -167,6 +167,46 @@ input[type=checkbox]:checked ~ ul{
             -webkit-transform: scale(1.2);
             -moz-transform: scale(1.2);
     }
+hr{
+    width:50%;
+    height:7px;
+    animation-name:hrline;
+    animation-duration:3s;
+        -webkit-animation-name:hrline;
+        -webkit-animation-duration:3s;
+        -moz-animation-name:hrline;
+        -moz-animation-duration:3s;
+}
+@keyframes hrline{
+    from{
+        background:blue;
+        margin-left:-50%;
+    }
+    to{
+        background:inherit;
+        margin-left:25%;
+    }
+}
+    @-webkit-keyframes hrline{
+        from{
+            margin-left:-50%;
+            background: blue;
+        }
+        to{
+            background:inherit;
+            margin-left:25%;
+        }
+    }
+    @-moz-keyframes hrline{
+        from{
+            background:blue;    
+            margin-left:-50%;
+        }
+        to{
+            background:inherit;
+            margin-left:25%;
+        }
+    }
 .name{
 	font-size: 24px;
 	font-weight: bold;
@@ -181,7 +221,7 @@ input[type=checkbox]:checked ~ ul{
         -moz-animation-duration: 6s; /*Mozilla support*/
         -webkit-animation-name: startimation; /*Safari support*/
     	-webkit-animation-duration: 6s; /*Safari support*/
-    font-family: 'Bad Script';
+    font-family: Amita;
 }
 @keyframes startimation{
 	from{color:rgb(237,242,250);}
@@ -196,28 +236,6 @@ input[type=checkbox]:checked ~ ul{
 @-moz-keyframes startimation{
 	from{color:rgb(237,242,250);}
 	to{color:#000;}
-}
-hr{
-    width:50%;
-    height:7px;
-    animation-name:hrline;
-    animation-duration:3s;
-        -webkit-animation-name:hrline;
-        -webkit-animation-duration:3s;
-        -moz-animation-name:hrline;
-        -moz-animation-duration:3s;
-}
-@keyframes hrline{
-    from{background:blue;margin-left:-50%;}
-    to{background:blue;margin-left:25%;}
-}
-@-webkit-keyframes hrline{
-    from{background:blue;margin-left:-50%;}
-    to{background:blue;margin-left:25%;}
-}
-@-moz-keyframes hrline{
-    from{background:blue;margin-left:-50%;}
-    to{background:blue;margin-left:25%;}
 }
 .description fieldset{
 	margin:5%;
@@ -237,13 +255,14 @@ hr{
 }
 .description fieldset q{
 	font-weight: bold;
-    font-family: 'Nothing You Could Do';
+    font-family: 'Cursive';
 }
 .scrollTop{
 	margin-left: 60%;
 	border:1px solid rgb(32,82,213);
 	padding:1%;
     border-radius:5%;
+    width:7%;
 }
 .scrollTop a{
     text-decoration: none;
@@ -254,14 +273,20 @@ footer{
     margin-top: 5%;
 	width: 100%;
 	text-align: left;
+	background: linear-gradient(to top, rgb(66,103,178), rgb(237,242,250));
+	padding:1%; 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-	background: linear-gradient(to top, rgb(66,103,178), rgb(237,242,250));
 }
-footer a{
-	text-decoration: none;
-	color: inherit;
+footer .first-footer{
+	display: block;
+	width: 100%;
+	text-align: left;
+}
+footer .first-footer .first-class{
+    margin-bottom:-4px;
+    width:20px;
+    height:20px;
 }
 footer p{
 	text-align: center
@@ -328,7 +353,6 @@ footer p{
             -moz-transform: scale(1.1);
     }
     footer{
-    	text-align:center;
     	font-family: 'Saira';
     }
 }
