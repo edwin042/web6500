@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    margin:4% 10%;
+    padding:0px;
+    text-align: center;
+    background: rgb(237,242,250);
+    font-family: 'Saira', Times New Roman;
+}
+.intro{
+    margin-top:4px;
+    text-align: left;
+}
+.page{
+    background: rgb(255,255,255);
+    padding:1%;
+    margin:2%;
+    box-shadow:1px 1px 1px #000;
+}
+.page:hover{
+    box-shadow:5px 5px 10px #000, -7px -8px 9px #000;
+}
+.page .validator{
+    width:80%;
+    border:1px solid black;
+}
+.page .cover-page{
+    width:50%;
+}
+ol{
+    text-align: left;
+}
+@media screen and (max-width: 870px){
+    body{
+        width:87%;
+    }
+}

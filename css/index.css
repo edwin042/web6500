@@ -8,24 +8,32 @@ body{
 	background: rgb(237,242,250);
     font-family: 'Saira';
 }
-/***********Mobile View***********/
+/**********************************
+              Mobile View
+***********************************/
 .welcome{
 	background:rgba(0,0,0,1);
 	font-size: 23px;
 	padding:1%;
 	color:white;
-	animation-name: startpoint;
-	animation-duration: 7s;
-        -webkit-animation-name: startpoint;
-        -webkit-animation-duration: 7s;
-        -moz-animation-name: startpoint;
-        -moz-animation-duration: 7s;
     font-family:'Bungee';
+	animation: startpoint 7s;
+        -webkit-animation: startpoint 7s;
+        -moz-animation: startpoint 7s;
 }
 @keyframes startpoint{
 	from{color:grey;}
 	to{color:white;}
 }
+    @-webkit-@keyframes startpoint{
+    	from{color:grey;}
+    	to{color:white;}
+    }
+    @-moz-@keyframes startpoint{
+    	from{color:grey;}
+    	to{color:white;}
+    }
+/*********************HOME PAGE********************/
 header{
 	background: url("back.png");
 	background-attachment: fixed; 
@@ -56,32 +64,29 @@ ul li{
 ul li a{
 	text-decoration: none;
 	color:#fff;
-	animation-name: homination;
-	animation-duration: 2s;
-        -webkit-animation-name: homination;
-        -webkit-animation-duration: 2s;
-        -moz-animation-name: homination;
-        -moz-animation-duration: 2s;
+	animation: homination 2s;
+        -webkit-animation: homination 2s;
+        -moz-animation: homination 2s;
 }
 @keyframes homination{
 	from{color:grey; border-bottom: inherit;}
 	to{color:#fff;}
 }
-@-webkit-keyframes homination{
-	from{color:grey; border-bottom: inherit;}
-	to{color:#fff;}
-}
-@-moz-keyframes homination{
-	from{color:grey; border-bottom: inherit;}
-	to{color:#fff;}
-}
+    @-webkit-keyframes homination{
+    	from{color:grey; border-bottom: inherit;}
+    	to{color:#fff;}
+    }
+    @-moz-keyframes homination{
+    	from{color:grey; border-bottom: inherit;}
+    	to{color:#fff;}
+    }
 input[type=checkbox]{
 	display: none;
 }
 input[type=checkbox]:checked ~ ul{
 	display: block;
 }
-.second-div img{
+.second-div .boy-picture{
 		width: 100px;
 		height: 100px;
 		background: #000;
@@ -89,40 +94,33 @@ input[type=checkbox]:checked ~ ul{
 		margin-top:1%;
 		transition: transform 1s;
 		border:4px solid rgb(237,242,250);
-		animation-name:rollercoster;
-		animation-duration: 3s;
-            -webkit-animation-name:rollercoster;
-            -webkit-animation-duration: 3s;
-            -moz-animation-name:rollercoster;
-            -moz-animation-duration: 3s;
+		animation:rollercoster 3s;
+            -webkit-animation:rollercoster 3s;
+            -moz-animation:rollercoster 3s;
 	}
 	@keyframes rollercoster{
 		from{
-                -webkit-transition: transform 10s;/*Safari*/
+                -webkit-transition: transform 10s;/**SUPPORTING SAFARI**/
                 -webkit-transform: rotateZ(-360deg);
-                -moz-transition: transform 10s;/*Mozilla*/
+                -moz-transition: transform 10s;/**SUPPORTING MOZILLA**/
                 -moz-transform: rotateZ(-360deg);
 			transition: transform 10s;
 			transform: rotateZ(-360deg);
-			background: rgb(66,103,178);
 			border-radius: 10%;
 			box-shadow: 2px 2px 1px grey;
 		}
 		to{
 			transition: none;
-			transform: none;
 			    -webkit-transition: none;
-                -webkit-transform: none;
                 -moz-transition: none;
-                -moz-transform: none;
-            background: black;
 		}
 	}
+    /**SUPPORTING SAFARI**/
     @-webkit-keyframes rollercoster{
 		from{
-                -webkit-transition: transform 10s;/*Safari*/
+                -webkit-transition: transform 10s;/**SUPPORTING SAFARI**/
                 -webkit-transform: rotateZ(-360deg);
-                -moz-transition: transform 10s;/*Mozilla*/
+                -moz-transition: transform 10s;/**SUPPORTING MOZILLA**/
                 -moz-transform: rotateZ(-360deg);
 			transition: transform 10s;
 			transform: rotateZ(-360deg);
@@ -132,17 +130,15 @@ input[type=checkbox]:checked ~ ul{
 		}
 		to{
 			transition: none;
-			transform: none;
 			    -webkit-transition: none;
-                -webkit-transform: none;
                 -moz-transition: none;
-                -moz-transform: none;
             background: inherit;
 		}
-	}
+	}  
+    /**SUPPORTING MOZILLA**/
     @-moz-keyframes rollercoster{
 		from{
-                -webkit-transition: transform 10s;/*Safari*/
+                -webkit-transition: transform 10s;/**SUPPORTING SAFARI**/
                 -webkit-transform: rotateZ(-360deg);
                 -moz-transition: transform 10s;/*Mozilla*/
                 -moz-transform: rotateZ(-360deg);
@@ -154,28 +150,22 @@ input[type=checkbox]:checked ~ ul{
 		}
 		to{
 			transition: none;
-			transform: none;
 			    -webkit-transition: none;
-                -webkit-transform: none;
                 -moz-transition: none;
-                -moz-transform: none;
             background: inherit;
 		}
 	}
 	.second-div img:hover{
         transform: scale(1.2);
-            -webkit-transform: scale(1.2);
-            -moz-transform: scale(1.2);
+            -webkit-transform: scale(1.2);/**SUPPORTING SAFARI**/
+            -moz-transform: scale(1.2);/**SUPPORTING MOZILLA**/
     }
 hr{
     width:50%;
     height:7px;
-    animation-name:hrline;
-    animation-duration:3s;
-        -webkit-animation-name:hrline;
-        -webkit-animation-duration:3s;
-        -moz-animation-name:hrline;
-        -moz-animation-duration:3s;
+    animation:hrline 3s;
+        -webkit-animation:hrline 3s;/**SUPPORTING SAFARI**/
+        -moz-animation:hrline 3s;/**SUPPORTING MOZILLA**/
 }
 @keyframes hrline{
     from{
@@ -187,6 +177,7 @@ hr{
         margin-left:25%;
     }
 }
+    /**SUPPORTING SAFARI**/
     @-webkit-keyframes hrline{
         from{
             margin-left:-50%;
@@ -197,6 +188,7 @@ hr{
             margin-left:25%;
         }
     }
+    /**SUPPORTING MOZILLA**/
     @-moz-keyframes hrline{
         from{
             background:blue;    
@@ -215,47 +207,39 @@ hr{
 .name a{
 	text-decoration: none;
 	color: #000;
-    animation-name: startimation;
-	animation-duration: 6s;
-        -moz-animation-name: startimation; /*Mozilla support*/
-        -moz-animation-duration: 6s; /*Mozilla support*/
-        -webkit-animation-name: startimation; /*Safari support*/
-    	-webkit-animation-duration: 6s; /*Safari support*/
+    animation: startimation 6s;
+        -moz-animation: startimation 6s; /**SUPPORTING SAFARI**/
+        -webkit-animation: startimation 6s; /**SUPPORTING MOZILLA**/
     font-family: Amita;
 }
 @keyframes startimation{
 	from{color:rgb(237,242,250);}
 	to{color:#000;}
 }
-/* For Safari*/
-@-webkit-keyframes startimation{
-	from{color:rgb(237,242,250);}
-	to{color:#000;}
-}
-/* For Mozilla*/
-@-moz-keyframes startimation{
-	from{color:rgb(237,242,250);}
-	to{color:#000;}
-}
-.description fieldset{
-	margin:5%;
-	padding: 4%;
+    /**SUPPORTING SAFARI**/
+    @-webkit-keyframes startimation{
+        from{color:rgb(237,242,250);}
+	    to{color:#000;}
+    }
+    /**SUPPORTING MOZILLA**/
+    @-moz-keyframes startimation{
+    	from{color:rgb(237,242,250);}
+    	to{color:#000;}
+    }
+.description{
+    width:100%;
+    margin-bottom: 2%;
+    height:400px;
+	padding-top: 40%;
+    text-align: center;
 	background: url("background.jpg");
-	color:rgb(237,242,250);
+    background-attachment: fixed;
 	font-size: 15px;
-	box-shadow: 2px 1px 2px #000;
     font-family: 'Norican'
 }
-.description fieldset legend{
-	border: 1px solid white;
-	font-weight: bold;
-	border-radius: 7%;
-	margin-top: 10%;
-	background: #000;
-}
-.description fieldset q{
-	font-weight: bold;
-    font-family: 'Cursive';
+.description a{
+    color:black;
+    text-decoration:none;
 }
 .scrollTop{
 	margin-left: 60%;
@@ -277,6 +261,7 @@ footer{
 	padding:1%; 
 	display: flex;
 	flex-direction: column;
+    font-size:11px;
 }
 footer .first-footer{
 	display: block;
@@ -285,13 +270,369 @@ footer .first-footer{
 }
 footer .first-footer .first-class{
     margin-bottom:-4px;
-    width:20px;
-    height:20px;
+    width:17px;
+    height:17px;
+    font-size:11px;
 }
 footer p{
-	text-align: center
+	text-align: center;
+    font-size:14px;
 }
+/******************************************/
+/************ABOUT PAGE***********/
+.photo-section .myProfile{
+    border-radius:100%;
+    margin-top: -10%;
+    width:140px;
+    height: 146px;
+    box-shadow:1px 1px 1px #000;
+    animation:myProfile 3s;
+        -webkit-animation:myProfile 3s;/**SUPPORTING SAFARI**/
+        -moz-animation:myProfile 3s;/**SUPPORTING MOZILLA**/
+}
+@keyframes myProfile{
+    from{
+        transition: transform 2s;
+        transform: scale(0.5);
+            -webkit-transition: transform 2s;/**SUPPORTING SAFARI**/
+            -webkit-transform: scale(0.5);
+            -moz-transition: transform 2s;/**SUPPORTING MOZILLA**/
+            -moz-transform: scale(0.5);
+    }
+    to{
+        transition:none; 
+            -webkit-transition:none;
+            -webkit-transition:none;
+    }
+}
+    /**SUPPORTING SAFARI**/
+    @-webkit-keyframes myProfile{
+        from{
+            transition: transform 2s;
+            transform: scale(0.5);
+                -webkit-transition: transform 2s;/**SUPPORTING SAFARI**/
+                -webkit-transform: scale(0.5);
+                -moz-transition: transform 2s;/**SUPPORTING MOZILLZA**/
+                -moz-transform: scale(0.5);
+        }
+        to{
+            transition:none;
+                -webkit-transition:none;
+                -moz-transition:none;
+        }
+    }
+    /**SUPPORTING MIOZILLA**/
+    @-moz-keyframes myProfile{
+        from{
+            transition: transform 2s;
+            transform: scale(0.5);
+                -webkit-transition: transform 2s;/**SUPPORTING SAFARI**/
+                -webkit-transform: scale(0.5);
+                -moz-transition: transform 2s;/**SUPPORTING MOZILLA**/
+                -moz-transform: scale(0.5);
+        }
+        to{
+            transition:none;
+                -webkit-transition:none;
+                -moz-transition:none;
+        }
+    }
+.myAboutSection{
+    font-size:24px;
+    animation: myAboutSection 2s;
+        -webkit-animation: myAboutSection 2s;/**SUPPORTING SAFARI**/
+        -moz-animation: myAboutSection 2s;/**SUPPORTING MOZILLA**/
+}
+@keyframes myAboutSection{
+    from{
+        transition: transform 2s; 
+        transform: scale(0.5);
+            -webkit-transition: transform 2s;/**SUPPORTING SAFARI**/
+            -webkit-transform:scale(0.5);
+            -moz-transition: transform 2s;/**SUPPORTING MOZILLA**/
+            -moz-transform:scale(0.5);
+    }
+    to{
+        transition:none;
+            -webkit-transition:none;/**SUPPORTING SAFARI**/
+            -moz-transition:none;/**SUPPORTING MOZILLA**/
+    }
+}
+    /**SUPPORTING SAFARI**/
+    @-webkit-keyframes myAboutSection{
+        from{
+            transition: transform 2s; 
+            transform: scale(0.5);
+                -webkit-transition: transform 2s;/**SUPPORTING SAFARI**/
+                -webkit-transform:scale(0.5);
+                -moz-transition: transform 2s;/**SUPPORTING MOZLLIA**/
+                -moz-transform:scale(0.5);
+        }
+        to{
+            transition:none;
+                -webkit-transition:none;/**SUPPORTING SAFARI**/
+                -moz-transition:none;/**SUPPORTING MOZILLA**/
+        }
+    }
+    /**SUPPORTING MOZILLA**/
+    @-moz-keyframes myAboutSection{
+        from{
+            transition: transform 2s; 
+            transform: scale(0.5);
+                -webkit-transition: transform 2s;/**SUPPORTING SAFARI**/
+                -webkit-transform:scale(0.5);
+                -moz-transition: transform 2s;/**SUPPORTING MOZILLA**/
+                -moz-transform:scale(0.5);
+        }
+        to{
+            transition:none;
+                -webkit-transition:none;/**SUPPORTING SAFARI**/
+                -moz-transition:none;/**SUPPORTING MOZILLA**/
+        }
+    }
+.section1{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    animation: dipen 1s linear;
+        -webkit-animation:dipen 1s linear;/**SUPPORTING SAFARI**/
+        -moz-animation:dipen 1s linear;/**SUPPORTING MOZILLA**/
+
+}
+@keyframes dipen{
+    from{margin-top:10%;}
+    to{margin-top:0%;}
+}
+    @-webkit-keyframes dipen{
+        from{margin-top:10%;}
+        to{margin-top:0%;}
+    }
+    @-moz-keyframes dipen{
+        from{margin-top:10%;}
+        to{margin-top:0%;}
+    }
+
+.person{
+    width:94%;
+    background:rgb(245,245,245);
+    border:1px solid black;
+    margin:3%;
+    padding:1%;
+}
+.education{
+    font-size:20px;
+    margin:3%;
+    padding:1%;
+    background:rgb(245,245,245);
+    border:1px solid black;
+    width:94%;
+}
+/********************************/
+/************CV PAGE***********/
+article{
+    margin: 2% 0% 1% 0%;
+    text-align: left;
+    background: rgb(235,235,235);
+    padding:2%;
+    box-shadow:1px 1px 1px black, -3px -3px 2px black;
+    animation: article 2s linear;
+        -webkit-animation: article 2s linear;/**SUPPORTING SAFARI**/
+        -moz-animation: article 2s linear;/**SUPPORTING MOZILLA**/
+}
+@keyframes article{
+    from{transition:transform 2s; transform: scale(0.5);}
+    to{transition:none;}
+}
+    /**SUPPORTING SAFARI**/
+    @-webkit-keyframes article{
+        from{transition:transform 2s; transform: scale(0.5);}
+        to{transition:none;}
+    }
+    /**SUPPORTING MOZILLA**/
+    @-moz-keyframes article{
+        from{transition:transform 2s; transform: scale(0.5);}
+        to{transition:none;}
+    }
+article:hover{
+    box-shadow:4px 3px 3px black, -7px -8px 8px black;
+}
+.education-status{
+    border-spacing: 0px;
+}
+.td{
+    border:1px solid black;
+    text-align: center;
+    padding:1%;
+}
+tr td{
+    padding: 2%;
+}
+.html-skill{
+    width:85%;
+    background: rgb(32,82,213);
+    border: 2px solid #000;
+}
+.css-skill{
+    width:80%;
+    background: rgb(32,82,213);
+    border: 2px solid #000;
+}
+.c-skill{
+    width:35%;
+    background: rgb(32,82,213);
+    border: 2px solid #000;
+}
+/********************************/
+/***************CONTACT PAGE******************/
+.label{
+    width:60%;
+    margin:2% 0% 2% 35%;
+}
+.textme{
+    padding:10px;
+    width:70%;
+    transition: transform 1s;
+        -webkit-transition: transform 1s;/**SUPPORTING SAFARI**/
+        -moz-transition: transform 1s;/**SUPPORTING MOZILLA**/
+    border: 1px solid rgb(32,82,213);
+    box-shadow: 1px 1px 1px black;
+}
+.textme:hover{
+    transform: scale(1.1); 
+        -webkit-transform: scale(1.1);/**SUPPORTING SAFARI**/
+        -moz-transform: scale(1.1);/**SUPPORTING MOZILLA**/
+}
+textarea{
+    padding:10px;
+    width:70%;
+    height:110px;
+    border: 1px solid rgb(32,82,213);
+    transition: transform 1s;
+        -webkit-transition: transform 1s;/**SUPPORTING SAFARI**/
+        -moz-transition: transform 1s;/**SUPPORTING MOZILLA**/
+    box-shadow: 1px 1px 1px black;
+}
+textarea:hover{
+    transform: scale(1.1);
+        -webkit-transform: scale(1.1);/**SUPPORTING SAFARI**/
+        -moz-transform: scale(1.1);/**SUPPORTING MOZILLA**/
+}
+.submit-button{
+    padding: 7px;
+    margin-bottom: 10%;
+}
+.googlemap{
+    width:90%;
+    height:500px;
+    border:1px solid #000;
+    box-shadow:1px 2px 1px #000;
+    margin-bottom: 3%;
+}
+/********************************************/
+/**************SOCIAL MEDIAS****************/
+.social-medias{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin:4%;
+    animation: facebokimation 4s;
+        -webit-animation: facebokimation 4s;
+        -moz-animation: facebokimation 4s;
+}
+@keyframes facebokimation{
+    0%{
+        transition: transform 1s;
+        transform: rotateY(180deg);
+        left: 0px;
+        top: 0px;
+    }
+    50%{
+        transition: transform 1s;
+        transform: rotateX(180deg);
+        left: 500px;
+        top: 0px;
+    }
+    75%{
+        transition: transform 1s;
+        transform: rotateZ(180deg);
+        left: 800px;
+        top: 0px;
+    }
+    100%{
+        transition: transform 2s;
+        transform: rotate(360deg);
+        left:1000px;
+        top:0px;
+    }
+}
+    /**SUPPORTING SAFARI**/
+    @-webkit-keyframes facebokimation{
+        0%{
+            transition: transform 1s;
+            transform: rotate3d(180deg);
+            left: 0px;
+            top: 0px;
+        }
+        50%{
+            transition: transform 1s;
+            transform: rotateX(180deg);
+            left: 500px;
+            top: 0px;
+        }
+        75%{
+            transition: transform 1s;
+            transform: rotateZ(180deg);
+            left: 800px;
+            top: 0px;
+        }
+        100%{
+            transition: transform 2s;
+            transform: rotate3d(180deg);
+            left:1000px;
+            top:0px;
+        }
+    }
+    /**SUPPORTING MOZILLA**/
+    @-moz-keyframes facebokimation{
+        0%{
+            transition: transform 1s;
+            transform: rotate3d(180deg);
+            left: 0px;
+            top: 0px;
+        }
+        50%{
+            transition: transform 1s;
+            transform: rotateX(180deg);
+            left: 500px;
+            top: 0px;
+        }
+        75%{
+            transition: transform 1s;
+            transform: rotateZ(180deg);
+            left: 800px;
+            top: 0px;
+        }
+        100%{
+            transition: transform 2s;
+            transform: rotate3d(180deg);
+            left:1000px;
+            top:0px;
+        }
+    }
+.social-icons{
+    width:30px;
+    height:30px;
+    margin:25px;
+    transition:transform 1s;
+}
+.social-icons:hover{
+    transform:scale(1.5);
+}
+/******************************************/
+
 /*************Desktop View***************/
+
+/****************************************/
 @media screen and (min-width: 870px){
 	body{
 		width:100%;
@@ -299,6 +640,8 @@ footer p{
 	.welcome{
         font-size: 30px;
     }
+    /****************HOME PAGE********************/
+    /*********Opening Home Page*******/
 	header{
 		width: 100%;
 		height:400px;
@@ -330,23 +673,23 @@ footer p{
 	header ul li .checked{
 		border-bottom: 3px solid rgb(195,195,195);
 	}
-	.second-div img{
+	.second-div .boy-picture{
 		margin-top:-3%;
-		width: 150px;
-		height: 150px;
+		width: 200px;
+		height: 200px;
 	}
 	.name{
 		font-size: 30px;
 	}
-	.description fieldset{
-		font-size: 20px;
+	.description{
+	    padding-top: 10%;
 	}
 	.scrollTop{
 		margin-left: 80%;
         width:7%;
         transition:transform 1s;
-            -webkit-transition:transform 1s;
-            -moz-transition:transform 1s;
+            -webkit-transition:transform 1s;/**SUPPORTING SAFARI**/
+            -moz-transition:transform 1s;/**SUPPORTING MOZLILLA**/
 	}
     .scrollTop:hover{
         transform: scale(1.1);
@@ -356,4 +699,57 @@ footer p{
     footer{
     	font-family: 'Saira';
     }
+    footer .first-footer{
+        font-size:15px;
+    }
+    /******************************************/
+    /**************ABOUT PAGE******************/
+    .section1{
+        flex-direction: row;
+    }
+    .photo-section .myProfile{
+    width: 255px;
+    height: 250px;
+    }
+    .myAboutSection{
+        font-size:30px;
+    }
+
+    .person{
+        width:40%;
+    }
+    .education{
+        width:50%;
+    }
+    /******************************************/
+    /**************SOCIAL MEDIAS***************/
+    .social-medias{
+        flex-direction: row;
+    }
+    .social-icons{
+        width:50px;
+        height:50px;
+    }
+    /******************************************/
+    /*****************CV PAGE******************/
+    article{
+        margin: 2% 20% 1% 25%;
+        padding:2%;   
+    }
+    tr td{
+        padding: 4%;
+    }
+    /*****************************************/
+    /*****************CONTACT PAGE*************/
+    .label{
+        width:50%;
+        margin-left: 39%;
+    }
+    .textme{
+        width:40%;
+    }
+    textarea{
+        width:40%;
+    }
+    /******************************************/
 }
